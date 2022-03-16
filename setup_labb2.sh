@@ -2,7 +2,7 @@
 # Script for setting up and running LABB2
 source common.sh
 printf "\033c"
-
+/usr/bin/pulseaudio --start > /dev/null 2>&1 &
 
 echo "############ Written by ##################################"
 echo "#     ${red}Cyrus Malekani${nc}, ${blu}Victor Åhgren${nc}, ${yel}Niclas Gerdin${nc}       #"
@@ -53,5 +53,5 @@ echo "       ***    Let's go ${blink} ${bol} ${red} C ${gre} R ${yel} A ${blu} Z
 echo ''
 echo ''
 
-nohup mplayer ./lets_get_crazy.mp3 > /dev/null 2>&1 &
+nohup mplayer /home/snv/LogRotatorDemo/lets_get_crazy.mp3 > /dev/null 2>&1 &
 (trap 'kill 0' SIGINT; /usr/local/bin/file_chkr.sh & /usr/local/bin/file_changer.sh)
