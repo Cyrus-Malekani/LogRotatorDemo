@@ -53,5 +53,5 @@ echo "       ***    Let's go ${blink} ${bol} ${red} C ${gre} R ${yel} A ${blu} Z
 echo ''
 echo ''
 
-nohup mplayer /home/snv/LogRotatorDemo/lets_get_crazy.mp3 > /dev/null 2>&1 &
+nohup mplayer ./lets_get_crazy.mp3 > /dev/null 2>&1 &
 (trap 'kill 0' SIGINT; /usr/local/bin/file_chkr.sh & /usr/local/bin/file_changer.sh)
